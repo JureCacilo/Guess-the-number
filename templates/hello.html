@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Ugani skrito stevilo</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Dobrodosel!</h1>
+    <p>Ugani skrito število med 1 in 30:</p>
+    <form method = "POST" >
+        <input type = "text" name = "vnos">
+        <input type = "submit" value = "Potrdi">
+
+
+    </form>
+    {% if vnos %}
+    {% if vnos == skrito_stevilo %}
+    <p>Čestitam, uganili ste skrito število!</p>
+    {% elif vnos > skrito_stevilo %}
+    <p>Vnesli ste previsoko število!</p>
+    {% elif vnos < skrito_stevilo %}
+    <p>Vnesli ste prenizko številko!</p>
+    {% else %}
+    <p>Vnesli ste neustrezen znak!</p>
+    {% endif %}
+    {% endif %}
+
+</body>
+</html>
